@@ -14,6 +14,7 @@ public class Ex04 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int input;		
+		for(int i =1; i<=5; ++i) {
 		System.out.println("Enter your score");
 		Scanner scanner = new Scanner(System.in); //scanner로 점수입력받는 창 열기
 		input = scanner.nextInt(); //scanner에서 입력받은 정수 입력받기, (input= 입렵받은 정수로 선언)}
@@ -43,6 +44,7 @@ public class Ex04 {
 		}
 		else {
 			System.out.println("F");
+			}
 	}
 	}
 }
