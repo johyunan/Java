@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+/*
+ * 점수를 입력받아서 학점 출력하기
+ */
+public class Ex05 {
+
+	public static void main(String[] args) {
+		int input;
+		
+//----------------------------------		
+		// TODO Auto-generated method stub
+		
+		for(int i =1; i<=5; ++i) {
+		//정수 입력받기
+		System.out.println("Enter your score");
+		Scanner scanner = new Scanner(System.in);
+		input = scanner.nextInt();
+		
+		
+		//학점 출력하기
+		input = input/10; //input /= 10;
+		
+		switch(input) {
+		case 10: case 9:
+			System.out.println("A"); break;
+		case 8:
+			System.out.println("B"); break;
+		case 7:
+			System.out.println("C"); break;
+		case 6:
+			System.out.println("D"); break;
+		default:
+			System.out.println("F"); break;
+		}
+		}
+//----------------------------------		
+	}
+}
