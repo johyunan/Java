@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+/*
+ * for 문 예제
+ * 별 (*) 을 5번 출력하기
+ * 
+ * 사각형의 가로와 세로를 입력받아서 넓이 구하여 출력하기
+ * Find the area of square
+ */
+public class Ex06 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for ( int i =0; i <= 5; ++i) {
+			System.out.println("*"); }
+			
+	int width;
+	int height;
+	int area;
+	//Enter the distance of width and height
+	for (int i = 1; i <= 3; ++i ) {
+		System.out.println(i + "th square");
+		System.out.println("enter the width:");
+		Scanner scanner = new Scanner(System.in);
+		width = scanner.nextInt();
+		
+		System.out.println("enger the height:");
+		height = scanner.nextInt();
+		area = width * height;
+		
+		System.out.println("area :" + area); 
+	}
+		}
+	}
