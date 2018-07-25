@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+/*
+ * 야구게임 만들기
+ * 3개의 임의 수를 저장하여
+ * 사용자가 입력한 값이 3개 모두 맞으면 아웃, 1개는 1스트라이크, 2개는 2스트라이크
+ * 
+ */
+public class Ex12 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//정수를 저장할 배열 3개
+		int array[] = new int[3];
+		//int array[] = {5,9,6};
+		//배열에 임의 수 저장
+		for(int index = 0; index < array.length; ++index) {
+			array[index] = (int)(Math.random()*10);
+			System.out.println(array[index]);
+		}
+		//사용자가 입력
+		int input;
+		System.out.println("정수 1~10사이의 수를 입력하세요 ");
+		Scanner scanner = new Scanner(System.in);
+		input = scanner.nextInt();
+		
+		//입력된 값이 array베열에 있는지 확인
+		//array 배열에 있으면 스트라이크 계산
+		for(int index =0; index < array.length; ++index) {
+			if (input ==array[index]) {
+				System.out.println("입력한 값이 같습니다");
+			}
+		}
+	}
+}
