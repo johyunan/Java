@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+/*
+ * 야구게임 만들기 
+ * (1을 입력하게 계속 0을 입력받으면 종료)
+ * 3개의 임의 수를 저장하여
+ * 사용자기 입력한 값이 3개모두 맞으면 아웃, 1개는 1 스트라이크, 2개는 2 스트라이크
+ */
+public class Ex12 {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int count=0;
+		int menu=1;
+		//-1. 컴퓨터가 임의 수 3개를 가지고 있는다.
+	    int[] array = new int[3]; // 임의 수를 저장하기 위한 공간	    
+	    //임의수를 배열에다가 저장하기
+	    	//for ( 초기값 = 0 ; 0~ (배열의크기-1) ; 1씩 증감
+	    // index <- 0  
+	    
+	    while( menu != 0) {  
+		    for(int index=0; index < array.length ; ++index ) {
+		    	array[index] = (int)(Math.random()*10); //임의수 생성위해 사용(0~9)
+		    }
+		    
+		    //확인용--array배열 값 출력
+		    for(int index=0; index < array.length; ++index ) {
+		    	System.out.print(array[index]+" ");
+		    }
+		    System.out.println("");//줄바꿈	    
+		    
+		    
+		    //-2. 사용자 입력받아서 임의의 수와 맞는지 확인하기
+		    //-2-1) 사용자에서(키보드) 입력받기
+		    for(int i=0; i < 3 ; ++i ) {//3번 입력받아서 array맞는지 확인하기
+			    System.out.println("0~9 수를 입력하세요");
+			    int input  = scanner.nextInt();
+			    //-2-2) 입력받은 데이타가 array에 있는지 확인
+			    for(int index=0; index < array.length; ++index) {
+			    	if( array[index] == input) {
+			    		++count;
+			    		System.out.println("입력한 값과 array["+index+"] 같습니다.");
+			    		break;
+			    	}
+			    }
+		    }
+		    System.out.println("count "+count);
+		    
+		    //맞춘수 확인하여 출력하기
+		    switch(count) {
+			    case 1:
+			    	System.out.println("원 스트라이크");break;
+			    case 2:
+			    	System.out.println("투 스트라이크");break;
+			    case 3:
+			    	System.out.println("아웃");break;
+			    default:
+			    	System.out.println("하나도 맞추기 못했어요.");
+		    }
+		    		    
+		    System.out.print("메뉴를 선택하세요");
+	    	System.out.println("1)게임하기  0)종료하기");
+	    	menu = scanner.nextInt();
+	    }
+		
+	}
+
+}
