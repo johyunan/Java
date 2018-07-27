@@ -1,0 +1,19 @@
+
+public class Ex18 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MyAddr myaddr = new MyAddr();
+		
+		myaddr.name = "";
+		myaddr.phone="010-7254-3735";
+		myaddr.memo ="";
+		
+		System.out.println(myaddr.getPhone());  //프로그램 작성시 대부분 이렇게 한다 -데이터 보호하기 위해서
+		
+		//재귀 호출은 
+		
+
+	}
+
+}
