@@ -1,0 +1,41 @@
+/*
+ * 주소록
+ * 멤버 변수
+ * 전화번호
+ * 이름
+ * 메모
+ * 
+ * 
+ * ---멤버 함수
+ * 전화번호 출력
+ * 이름 출력
+ * 주소록 출력
+ */
+public class MyAddr {
+	String phone;
+	String name;
+	String memo;
+	
+	//멤버함수
+	/* 이름 출력
+	 * 반환값 없음
+	 * 이름 : printName
+	 * 매개변수 없음
+	 */
+	
+	void printName() {
+		
+		System.out.println(name + " " + phone+" "+ memo);
+	}
+	
+	//전화번호 넘겨주는 함수
+	/*반환값 : 전화번호 (String)
+	 * 이름 : getPhone
+	 * 매개변수 : 없음
+	 * 
+	 */
+	String getPhone() {
+		System.out.println(phone);
+		return phone;
+	}
+}
