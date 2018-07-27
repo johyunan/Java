@@ -1,0 +1,32 @@
+
+public class Ex17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		MyMath my = new MyMath();
+		int sum;
+		sum = my.add(100, 20);
+		System.out.println(sum);
+		
+		int val1 = 100;
+		int val2 = 20;
+		//sum = my.add(val1, val2);
+		System.out.println(sum);
+		
+		int subt;
+		subt = my.sub(100, 10);
+		System.out.println(subt);
+		
+		float divi;
+		divi = my.div(100, 17);
+		System.out.println(divi);
+		
+		int mult;
+		mult = my.mul(9, 9);
+		System.out.println(mult);
+		
+		
+	}
+
+}
