@@ -1,0 +1,22 @@
+class InitTest {
+	
+	int iv = 1;
+	static int cv=1;
+	
+	static { cv=2;}
+	{iv = 2;}
+	
+	InitTest() {
+		iv = 3;
+	}
+}
+public class Ex23 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		InitTest i = new InitTest();
+		
+		System.out.println("cv ="+i.cv);
+		System.out.println("iv ="+i.iv);
+	}
+}
