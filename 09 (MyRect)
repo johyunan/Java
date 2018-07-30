@@ -1,0 +1,28 @@
+
+public class MyRect {
+//This class finds the area of rectangle
+	/* width and height of the rectangle (int)
+	 * return type : int
+	 * parameter : width(int) , height(int)
+	 * function name(함수명) : getArea
+	 * 
+	 */
+	int getArea(int width, int height) {
+		return width * height;
+		
+	}
+	
+	long getArea(long width, long height) {
+		return (long)(width * height);
+	}
+	/* width and height of the rectangle (int)
+	 * return type : integer(float)
+	 * parameter : width(float) , height(float)
+	 * function name(함수명) : getArea
+	 */
+	
+	float getArea(float width, float height) {
+		return width * height;
+	}
+	
+}
