@@ -1,0 +1,13 @@
+public class Ex22 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car mycar = new Car("Toyota", "auto", 6);
+		Car mycar2 = new Car("Honda", "auto", 6);
+		Car mycar3 = new Car();
+		
+		mycar.printAll();
+		mycar2.printAll();
+		mycar3.printAll();
+	}
+}
