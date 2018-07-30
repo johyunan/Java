@@ -1,0 +1,22 @@
+
+public class Ex18 {
+
+	public static void main(String[] args) {
+		
+	// TODO Auto-generated method stub
+	MyAddr myaddr = new MyAddr();
+	
+	 MyAddr myaddr2 = new MyAddr("제니", "01049242293", null);
+	 
+       myaddr.name = "공유";
+       myaddr.phone = "010-1234-5678";
+       myaddr.memo = "yes";
+       
+	
+	
+       myaddr.printAll();
+       myaddr2.printName();
+       System.out.println(myaddr.getPhone());
+       }
+
+}
