@@ -1,0 +1,41 @@
+//주소록
+//---멤버변수
+//전화번호 이름 메모
+//----멤버함수
+//전화번호 이름 주소록 출력
+public class MyAddr {
+    //멤버함수
+	 String phone;
+     String name;
+     String memo;
+     
+     MyAddr() {}
+     
+ 	MyAddr(String n, String p , String m) {
+		name = n;
+		phone = p;
+		memo = m; 
+ 	}
+ 	
+    
+    //멤버함수
+   //반환값 : 없음
+    //이름 : printName
+    //매게변수 : 없음
+    
+    void printName() {
+    	System.out.println(name);
+    }
+    
+    void printAll() {
+    	System.out.println(name+" "+phone+" "+memo);
+    	System.out.println("");
+    	
+    }
+    String getPhone() {
+    	return phone;
+    }
+
+
+
+}
