@@ -1,0 +1,41 @@
+class Point{
+	int x;
+	int y;
+	
+	Point(int x, int y){
+		this.x = x;
+		this.y = y;
+		
+	}
+	String getLocation() {
+		return "x: " +x+" y:"+y;
+	}
+}
+class Point3D extends Point{
+	int z;
+	
+	Point3D(int x, int y, int z) {
+		super(x,y); //부모(Point)class의 생성자 호출
+		//this.x = x;
+		//this.y = y;
+		this.z = z;
+	}
+	//Overriding (함수 재정의) ->상속에서 사용
+	String getLocation() {
+		return "x: " +x+" y:"+ y+" z: "+z;
+	}
+	//Overloading (같은이름의 다른 함수 동작기능은 같다) -> 멤머함수(메서드)에서 많이 사용
+	String getLocation(int i) {
+		//return super.getLocation(); //부모(point)의 getLocation 호출(call)
+		return getLocation(); // ==this.getLocation();
+	}
+}
+public class Ex29 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Point3D p3 = new Point3D(1,2,3);
+		String result = p3.getLocation();
+		System.out.println(result);
+		System.out.println(p3.getLocation(0));
+	}
