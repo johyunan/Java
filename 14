@@ -1,0 +1,20 @@
+public class Ex27 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Shape s = new Shape();
+		Circle c1 = new Circle();
+		Circle c2 = new Circle(new Point(150,150), 50);
+		
+		s.draw();
+		c1.draw();
+		System.out.println(c1.color);
+		
+		Triangle t1 = new Triangle(new Point(10,0), new Point(20,50), new Point(100,300));
+		t1.draw();
+		t1.color = "red";
+		System.out.println("t1 color:" +t1.color);
+		System.out.println("c1 color:"  +c1.color);
+		
+	}
+}
