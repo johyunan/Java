@@ -1,0 +1,42 @@
+/*
+ * 물건을 구입하는 buyer class
+ */
+class Product{
+	int price;
+	Product(int price){
+		this.price = price;
+	}
+}
+
+class Computer extends Product{
+	Computer() {Super(200);}
+}
+class Audio extends Product {
+	Audio(){Super(300);}
+}
+class Buyer {
+	int money;
+	Product[] cart = new Product[3];
+	void buy(Product p) {
+		//cart (total cost)
+		//잔액 = money - sum();
+	}
+	void add(Product p) {
+		//cart  추가
+	}
+	
+	void sum() {
+		int s = 0;
+		for(int i =0; i < cart.length; ++i) {
+			s += cart[i].price;
+		}
+	}
+}
+public class Ex33 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
