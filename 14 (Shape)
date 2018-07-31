@@ -1,0 +1,54 @@
+class Point {
+	int x;
+	int y;
+	
+	Point() {
+		this(0,0);
+	}
+	Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+}
+public class Shape {
+	String color = "blue";   //instance 변수는 new 라는 키워드 만날때 마다 변함
+	void draw() {
+		System.out.println("Shape");
+}
+}
+
+class Circle extends Shape {
+	Point center;  //멤버변수 사용
+	int r;
+	
+	Circle(int x, int y) {
+		center = new Point(x,y);
+		//center.x = x;
+		//center.y = y;
+	}
+	
+	Circle() {
+		this(new Point(0,0),100);
+		
+	}
+	Circle(Point center, int r) {
+		this.center = center;
+		this.r = r;
+		
+	}
+}
+
+class Triangle extends Shape {
+	//점 3개의 삼각형
+	Point[] p; //포인트의 배열을 멤버변수로 갖고있음
+	
+	Triangle(Point[] p) {
+		this.p = p;
+	}
+	Triangle(Point p1, Point p2, Point p3){
+		p = new Point[] {p1,p2,p3};
+	}
+}
+	
+	
+
