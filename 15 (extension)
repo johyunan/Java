@@ -1,0 +1,34 @@
+
+public class Product {
+	int price;
+	Product(int price) {
+		this.price = price;
+	//Product() {}
+	}
+}
+// 주제: 부모 class 와 자신 class의 별도의 공간이 만들어져서 둘 다 함께 사용할수있다 
+class Tv extends Product {
+	boolean power;
+	int channel;
+	Tv(int price) {
+		super(price); //생성자는 상속을 받지 못하기 때문에 부모 생성자 함수 호출
+		//this.price = price;
+	}
+	public String toString() {
+		return "Tv";
+	}
+	void channelUp() {	++channel;}
+	void channelDown() {	--channel;}
+	void power() { power = !power;}
+}
+
+class Radio extends Product{
+	float frequency;
+	String bc;
+	
+	Radio(int price){
+		super(price);
+		frequency = 107.7f;
+		bc = "sbs";
+	}
+}
