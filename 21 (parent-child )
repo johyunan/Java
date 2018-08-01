@@ -1,0 +1,29 @@
+class Tv{
+	boolean power;
+	int channel;
+	void power() { power = ! power;}
+	void channelUp() {++channel;}
+	void channelDown() {--channel;}
+	
+}
+
+class CaptionTv extends Tv{
+	String text;
+	void caption() { System.out.println("caption");}
+}
+public class Ex36 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CaptionTv c = new CaptionTv();
+		c.caption();
+		Tv t = new CaptionTv(); //생성자는 child클래스를 통하여 생성하므로 caption변수/함수
+		t.channelUp(); //tv 클래스 내용 모두 사용 가능
+		//t.caption(); //Tv 타입은 CaptionTv 사용 불가  ->참조형변수 TV타입 안에 들어있는 함수만 사용가능
+		
+		Tv t2 = new CaptionTv();
+		// CaptionTv c2 = new Tv(); // TV안에는 caption이라는 함수가 없기 때문에 사용 불가능. 왜?=> (child가 parent class 보다 더 많은 내용 (멤버변수,함수)가지고 있기때문에 
+		//t2.caption(); //
+	}
+
+}
