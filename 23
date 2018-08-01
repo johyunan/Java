@@ -1,0 +1,29 @@
+class Card {
+	final int NUMBER;
+	final String KIND;
+	static int width = 100;
+	static int height = 250;
+	
+	
+	Card(String kind, int num) {
+		KIND = kind;
+		NUMBER = num;
+	}
+	
+	public String toString() {
+		return ""+KIND+","+NUMBER;
+	}
+}
+public class Ex34 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Card c = new Card("Heart", 7);
+		System.out.println(c.toString());
+		//c.KIND = "S";
+		//c.NUMBER = 5;
+		MyTime t = new MyTime();
+		
+	}
+
+}
