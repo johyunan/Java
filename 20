@@ -1,0 +1,49 @@
+class Car{
+	String color;
+	int door;
+	
+	void drive() {
+		System.out.println("drive,");
+	}
+	void stop() {
+		System.out.println("stop");
+	}
+	void print() {
+		System.out.println("car");
+	}
+	}
+class FireEngine extends Car{
+	int x =119;
+	void print() {
+		System.out.println("FireEngine print");
+	}
+	void water() {
+		System.out.println("water");
+	}
+}
+class Ambulance extends Car{
+	void siren() {
+		System.out.println("siren");
+	}
+}
+public class Ex37 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car car = null;
+		FireEngine fe = new FireEngine();
+		FireEngine fe2 = new FireEngine();
+		
+		fe.water();
+		car = fe;
+		fe.drive();
+		car.drive();
+		fe2 = (FireEngine)car;
+		fe2.water();
+		((FireEngine)car).water();
+		
+		if (car instanceof)
+
+	}
+
+}
