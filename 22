@@ -1,0 +1,26 @@
+class Singleton{
+	private static Singleton s = new Singleton();
+	private Singleton() {
+		System.out.println("t");
+		
+	}
+	
+	public static Singleton getInstance() {
+		if (s == null) {
+			s = new Singleton();
+		}
+		return s;
+	}
+	void print() {
+		System.out.println("print");
+	}
+}
+public class Ex35 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Singleton s = Singleton.getInstance();
+		s.print();
+	}
+
+}
