@@ -1,0 +1,36 @@
+/*
+ * Robot class 정의
+ * DanceRobot, SingRobot, DrawRobot정의--->Robot상속받는다
+ */
+class Robot{
+	void print() {
+		System.out.println("Robot입니다.");
+	}
+}
+class DanceRobot extends Robot{
+	void Dance() {
+		System.out.println("DanceRobot");
+	}
+}
+class SingRobot extends Robot{
+	void Sing() {
+		System.out.println("SingRobot");
+	}
+}
+class DrawRobot extends Robot{
+	void Draw() {
+		System.out.println("DrawRobot");
+	}
+}
+public class Ex32 {
+
+	public static void main(String[] args) {
+		DanceRobot d = new DanceRobot();
+		SingRobot s = new SingRobot();
+		DrawRobot dr = new DrawRobot();
+		
+		
+		
+	}
+
+}
