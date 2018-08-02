@@ -1,0 +1,31 @@
+class Unit{
+	int x, y;
+	void move(int x, int y) {
+		System.out.println("move("+x+","+y+")");
+	}
+	void stop() {
+		System.out.println(" stop");
+	}
+}
+class Marine extends Unit{
+	void stimPack() {
+		System.out.println("보병 StimPack");
+	}
+}
+
+class Dropship extends Unit{
+	void load() {
+		System.out.println("DropShip load");
+	}
+	void unload() {
+		System.out.println("DropShip unload");
+	}
+}
+public class Ex31 {
+
+	public static void main(String[] args) {
+		Marine m = new Marine();
+
+	}
+
+}
