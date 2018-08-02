@@ -1,0 +1,27 @@
+public class Ex30 {
+	public static void main(String[] args) {
+		ABC obj = new ABC();
+		
+		System.out.println("obj.a"+obj.a);
+		System.out.println("obj.b"+obj.b);
+		System.out.println("obj.c"+obj.c);
+	}
+}
+class A {
+	int a=1;
+	A(){
+		a=10;
+	}
+}
+class AB extends A{
+	int b=2;
+	AB(){
+		b=20;
+	}
+}
+class ABC extends AB{
+	int c=3;
+	ABC(){
+		c=30;
+	}
+}
