@@ -1,0 +1,49 @@
+class Account {
+	int balance = 1000;
+
+	public void withdraw(int money) {
+		if (balance >= money) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			balance -= money;
+		}
+	}
+}
+
+class MyThread implements Runnable {
+	Account acc = new Account();
+
+	@Override
+	public void run() {
+		synchronized (this) {//이게 없으면 -값이 나온다. Why? 속도가 달라서 이미 if확인하고 들어왔는데 처리를 못하게 된다?
+			                      //그래서 이걸 넣어주면 하나가 끝날때 까지 기다렸다가 수행하므로 괜찮음.
+			while (acc.balance > 0) {
+				int money = (int) (Math.random() * 3 + 1) * 100;
+				acc.withdraw(money);
+				System.out.println("balance : " + acc.balance);
+			}
+
+		}
+	}
+
+	public void start() {
+		Thread thread = new Thread(this);
+		thread.start();
+	}
+
+}
+
+public class Ex46 {
+
+	public static void main(String[] args) {
+		MyThread thread = new MyThread();
+		thread.start();//main 에서는 start여러개 해줘도 괜찮다. 위에 함수에다가 해주면 오류가 일어남
+		thread.start();
+		thread.start();
+
+	}
+
+}
